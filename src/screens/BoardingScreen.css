@@ -1,0 +1,128 @@
+.boarding-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.boarding-screen .controls {
+    background: transparent;
+    padding: 0;
+    border: none;
+    grid-template-columns: 1fr;
+}
+
+.boarding-screen .controls input {
+    width: 100%;
+    background: #252525;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.boarding-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.boarding-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #252525;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+}
+
+.boarding-card:hover {
+    border-color: #555;
+    transform: translateX(4px);
+}
+
+.boarding-card.boarded {
+    opacity: 0.5;
+    background: #1a1a1a;
+    border-color: transparent;
+}
+
+.seq-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #444;
+    width: 40px;
+    text-align: center;
+}
+
+.boarding-card:not(.boarded) .seq-number {
+    color: var(--color-primary);
+}
+
+.booking-info {
+    flex: 1;
+}
+
+.booking-info .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.booking-id {
+    font-weight: 700;
+    color: white;
+}
+
+.mobile-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+}
+
+.mobile-link:hover {
+    color: var(--color-primary);
+}
+
+.seats {
+    background: #1a1a1a;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.action-btn {
+    background: transparent;
+    color: #666;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.action-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.boarding-card.boarded .action-btn {
+    color: var(--color-success);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}

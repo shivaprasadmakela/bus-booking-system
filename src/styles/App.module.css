@@ -1,0 +1,65 @@
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 600px;
+
+    margin: 0 auto;
+    background: var(--color-surface);
+    box-shadow: var(--shadow-lg);
+}
+
+.appHeader {
+    padding: 1rem;
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary);
+}
+
+.appHeader nav {
+    display: flex;
+    gap: 8px;
+}
+
+.appHeader nav button {
+    background: transparent;
+    color: var(--color-text-secondary);
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.appHeader nav button.active {
+    background: var(--color-primary);
+    color: white;
+}
+
+.appHeader nav button.active:hover {
+    background: var(--color-primary-hover);
+    opacity: 1;
+}
+
+.appContent {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    position: relative;
+}
